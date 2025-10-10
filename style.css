@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Aref Ruqaa', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100svh;
+    overflow: hidden;
+    background-image: url('Images/5540930.jpg');
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    height: 7rem;
+    padding: 10px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+header h3 {
+    color: #2d1b69;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.4em;
+    flex: 1;
+}
+
+#ayah {
+    font-size: 1.9rem;
+    color: #000;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    margin-bottom: 5px;
+    font-weight: 700;
+    direction: rtl;
+}
+
+#counters {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    gap: 100px;
+    color: #000;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 09);
+    font-size: 27px;
+    cursor: text;
+}
+
+#num {
+    display: inline-block;
+    font-size: 8em;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    cursor: text;
+}
+
+#count {
+    font-size: 8em;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 0 0 10px #fff;
+    cursor: text;
+}
+
+#tasbeeh {
+    border-radius: 20px;
+    width: 700px;
+    height: 200px;
+    display: inline-block;
+    outline: none;
+    font-size: 40px;
+    color: #222;
+    font-weight: bold;
+    -webkit-tap-highlight-color: transparent;
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    transition: transform 0.1s, box-shadow 0.3s, background 0.3s;
+    margin-bottom: 20px;
+}
+
+button:active {
+    transform: scale(0.93);
+    box-shadow: 0 4px 16px rgba (0, 0, 0, 0.2);
+}
+
+#reset {
+    background-color: red;
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    transition: transform 0.1s;
+    margin-bottom: 20px;
+}
+
+#message {
+    position: relative;
+    bottom: 20px;
+    opacity: 0;
+    margin-top: 10px;
+    transition: opacity 0.5s ease;
+    color: white;
+    font-size: 30px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    direction: rtl;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 8px 0;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-align: center;
+    font-size: clamp(12px, 3vw, 23px);
+}
+
+footer h2:last-child {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        height: auto;
+        padding: 0;
+        margin: 0;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    header h3 {
+        font-size: 1rem;
+    }
+    #counters {
+        font-size: 1rem;
+    }
+
+    #num {
+        font-size: 1.6rem;
+    }
+
+    #count {
+        font-size: 23px;
+    }
+
+    #tasbeeh {
+        width: 18rem;
+        height: 14rem;
+        font-size: 7em;
+    }
+
+    #reset {
+        transition: transform 0.1s linear;
+        margin-bottom: 40px;
+        width: 70%;
+        font-size: 1rem;
+    }
+
+    #message {
+        padding-top: 0px;
+        font-size: 3em;
+    }
+
+    footer {
+        margin-top: 15px;
+        position: fixed;
+        padding: 5px 0;
+        font-size: 12px;
+    }
+    footer h2:last-child {
+        font-size: 12px;
+    }
+}
+
+
+/* ✅ ضبط الموبايلات الصغيرة جدًا */
+@media (max-width: 380px) {
+    #tasbeeh {
+        width: 16rem;
+        height: 12rem;
+        font-size: 5em;
+    }
+
+    #message {
+        font-size: clamp(18px, 3vw, 28px);
+        bottom: 10px;
+    }
+
+    #reset {
+        font-size: 0.9rem;
+        width: 80%;
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 11px;
+        padding: 4px 0;
+    }
+}
+
+/* ✅ شاشات التابلت */
+@media (min-width: 481px) and (max-width: 768px) {
+    #counters{
+        font-size: 20px;
+    }
+
+    #num {
+        font-size: 20px;
+    }
+
+    #tasbeeh {
+        width: 30rem;
+        height: 10rem;
+    }
+
+    #count {
+        font-size: 30px;
+    }
+
+
+    #message {
+        font-size: clamp(14px, 2vw, 20px);
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        font-size: 10px;
+    }
+}
