@@ -116,39 +116,3 @@ reset.onclick = function () {
 }
 
 // ------------------------------------------
-
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-        .register('./service-worker.js')
-        .then(() => console.log('✅ Service Worker registered!'))
-        .catch((err) => console.error('Service Worker error:', err))
-}
-
-let deferredPrompt
-
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault()
-    deferredPrompt = e
-    const installBtn = document.createElement('button')
-    installBtn.textContent = '📲 تثبيت التطبيق'
-    installBtn.style.position = 'fixed'
-    installBtn.style.bottom = '20px'
-    installBtn.style.left = '50%'
-    installBtn.style.transform = 'translateX(-50%)'
-    installBtn.style.padding = '10px 20px'
-    installBtn.style.fontSize = '18px'
-    installBtn.style.borderRadius = '10px'
-    installBtn.style.background = '#4CAF50'
-    installBtn.style.color = '#fff'
-    installBtn.style.border = 'none'
-    installBtn.style.cursor = 'pointer'
-    document.body.appendChild(installBtn)
-
-    installBtn.addEventListener('click', async () => {
-        installBtn.remove()
-        deferredPrompt.prompt()
-        const { outcome } = await deferredPrompt.userChoice
-        console.log(`User response: ${outcome}`)
-        deferredPrompt = null
-    })
-})
